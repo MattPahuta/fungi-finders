@@ -158,19 +158,22 @@
     color: var(--text-main);
   }
 
-  h1, h2, h3, h4 {
+  h1,
+  h2,
+  h3,
+  h4 {
     font-family: var(--ff-heading);
     font-weight: 700;
     color: var(--text-high-contrast);
   }
 
   /* This could be 'page-title' instead */
-  h1, .primary-title {
+  h1,
+  .primary-title {
     font-size: var(--font-size-heading-lg);
   }
 
   .section-title {
-
   }
 
   a {
@@ -181,5 +184,18 @@
   a:hover,
   a:focus-visible {
     color: var(--text-brand-light);
+  }
+}
+
+/* Keep utilities at the bottom of the file */
+@layer utilities {
+  .visually-hidden {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
   }
 }
