@@ -1,4 +1,4 @@
-# Project Source - Project Title
+# FungiFinders - A Frontend Masters design
 
 This is a solution to the [Description of project/challenge](https://www.sourceofproject.com). 
 
@@ -56,9 +56,44 @@ To see how you can add code snippets, see below:
 ```html
 <h1>Some HTML code I'm proud of</h1>
 ```
+
+My first time using nested media queries and data attribute styling in a proper project, additionally locally scoped variables (which I haven't used often), Example:
+
 ```css
-.proud-of-this-css {
-  color: papayawhip;
+@layer layout {
+  .section {
+    --padding: 3.75rem;
+    padding-block: var(--padding);
+
+    @media (width > 760px) {
+      --padding: 8rem;
+
+      &[data-padding="compact"] {
+        --padding: 4.5rem;
+      }
+    }
+  }
+
+  .wrapper {
+    --wrapper-max-width: 1130px;
+    /* 
+      different approahes to setting the max-width here
+      Layout & Utility Classes => Wrappers & Containers ~ 4:00
+    */
+    max-width: var(--wrapper-max-width);
+    margin-inline: auto;
+    padding-inline: 1rem;
+    box-sizing: content-box;
+    /* nesting a modifier */
+    &[data-width="narrow"] {
+      --wrapper-max-width: 720px;
+    }
+
+    &[data-width="wide"] {
+      --wrapper-max-width: 1330px;
+    }
+
+  }
 }
 ```
 ```js
