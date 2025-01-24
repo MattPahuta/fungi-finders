@@ -185,6 +185,10 @@
   a:focus-visible {
     color: var(--text-brand-light);
   }
+
+  img {
+    border-radius: var(--border-radius-3);
+  }
 }
 
 @layer layout {
@@ -221,6 +225,32 @@
     }
   }
 }
+
+@layer components {
+  .site-header {
+    padding-block: 1rem;
+  }
+  
+  .site-header__inner {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.5rem 1rem;
+  }
+
+  .primary-navigation {
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem 1rem;
+    }
+  }
+}
+
+
 
 /* Keep utilities at the bottom of the file */
 /* Created Utility Classes
