@@ -33,11 +33,13 @@
     </header>
 
     <main id="main">
-      <section class="hero section" data-padding="compact">
+      <section class="hero flow section" data-padding="compact">
         <div class="wrapper">
-          <h1>Discover the World of Mushroom Foraging</h1>
+          <h1 class="hero__title">
+            Discover the World of <span>Mushroom Foraging</span>
+          </h1>
         </div>
-        <div class="wrapper" data-width="narrow">
+        <div class="wrapper flow" data-width="narrow">
           <p>
             Mushroom foraging is the art and science of identifying
             and collecting wild mushrooms.
@@ -57,7 +59,7 @@
       </section>
 
       <section class="section">
-        <div class="wrapper">
+        <div class="wrapper flow">
           <h2 class="section-title">The joys of mushroom foraging</h2>
           <p>
             Foraging for mushrooms can be a rewarding experience for
@@ -69,8 +71,8 @@
 
           <!-- 3 columns needed -->
           <!-- ToDo: Add meaningful alt text for images -->
-          <div class="card-wrapper">
-            <div class="card">
+          <div class="equal-columns card-wrapper">
+            <div class="card grid-flow">
               <img src="./assets/outdoor-exploration.webp" alt="" />
               <h3>Outdoor Exploration</h3>
               <p>
@@ -82,7 +84,7 @@
                 discoveries around every tree and under every log.
               </p>
             </div>
-            <div class="card">
+            <div class="card grid-flow">
               <img
                 src="./assets/botanical-expertise.webp"
                 alt="An assortment of wild mushrooms arranged on a table" />
@@ -97,7 +99,7 @@
                 in ecosystem health.
               </p>
             </div>
-            <div class="card">
+            <div class="card grid-flow">
               <img
                 src="./assets/culinary-delight.webp "
                 alt="A steaming plate of food topped with fresh mushrooms" />
@@ -116,9 +118,16 @@
         </div>
       </section>
 
-      <section class="background-accent section" data-padding="compact">
-        <div class="wrapper" data-width="narrow">
-          <h2 class="section-title">Start your <span class="text-brand">Foraging Adventure!</span></h2>
+      <section
+        class="background-accent section text-center"
+        data-padding="compact">
+        <div
+          class="wrapper flow font-size-lg text-high-contrast"
+          data-width="narrow">
+          <h2 class="section-title">
+            Start your
+            <span class="text-brand">Foraging Adventure!</span>
+          </h2>
           <p>
             Whether you're seeking a deeper connection with nature, a
             new outdoor hobby, or simply love the idea of finding your
@@ -131,12 +140,17 @@
       <section class="section background-extra-dark">
         <!-- two columns -->
         <div class="wrapper" data-width="wide">
-          <div class="equal-columns">
+          <div
+            class="equal-columns"
+            data-gap="large"
+            data-vertical-alignment="centered">
             <div>
               <img src="./assets/get-to-know.webp" alt="" />
             </div>
-            <div>
-              <h2 class="section-title">Get to know your mushrooms</h2>
+            <div class="flow font-size-lg">
+              <h2 class="section-title">
+                Get to know your mushrooms
+              </h2>
               <p>
                 Successful and safe mushroom foraging begins with a
                 deep understanding of the species you'll encounter in
@@ -162,22 +176,27 @@
       <section class="section">
         <!-- two columns -->
         <div class="wrapper" data-width="wide">
-          <div>
-            <h2 class="section-title">Connect with Nature</h2>
-            <p>
-              Experience the beauty of the great outdoors while
-              foraging for mushrooms with fellow enthusiasts.
-            </p>
-            <a href="" class="button"
-              >Learn more
-              <span class="visually-hidden"
-                >about connecting with fellow mushroom
-                enthusiasts</span
-              ></a
-            >
-          </div>
-          <div>
-            <img src="./assets/nature.webp" alt="" />
+          <div
+            class="equal-columns"
+            data-gap="large"
+            data-vertical-alignment="centered">
+            <div class="flow font-size-lg">
+              <h2 class="section-title">Connect with Nature</h2>
+              <p>
+                Experience the beauty of the great outdoors while
+                foraging for mushrooms with fellow enthusiasts.
+              </p>
+              <a href="" class="button"
+                >Learn more
+                <span class="visually-hidden"
+                  >about connecting with fellow mushroom
+                  enthusiasts</span
+                ></a
+              >
+            </div>
+            <div>
+              <img src="./assets/nature.webp" alt="" />
+            </div>
           </div>
         </div>
       </section>
