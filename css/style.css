@@ -173,9 +173,6 @@
     font-size: var(--font-size-heading-lg);
   }
 
-  .section-title {
-  }
-
   a {
     color: var(--text-high-contrast);
   }
