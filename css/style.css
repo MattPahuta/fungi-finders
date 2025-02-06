@@ -150,6 +150,13 @@
     /* Set font family at html  */
     font-family: var(--ff-body);
     line-height: 1.6;
+    scroll-padding: 1.5rem;
+  }
+  /* set default as no smooth scroll  */
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
   }
 
   body {
