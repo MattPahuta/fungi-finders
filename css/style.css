@@ -217,6 +217,7 @@
     - auto-fit: creates as many columns as possible
     - auto-fill: creates as many columns as possible, but fills them with empty space
     - Most of the time, you'll want to use auto-fit
+    - *** For this project, where the card filtering is dynamic, auto-fill is better
   */
   .grid-auto-fit {
     --auto-fit-min-col-size: 250px;
@@ -600,6 +601,9 @@
       - buttons
 */
 @layer utilities {
+  [hidden] {
+    display: none;
+  }
   .visually-hidden {
     clip: rect(0 0 0 0);
     clip-path: inset(50%);
@@ -608,6 +612,9 @@
     position: absolute;
     white-space: nowrap;
     width: 1px;
+  }
+  .no-results {
+    font-size: var(--font-size-md);
   }
   .text-center {
     text-align: center;

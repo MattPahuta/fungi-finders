@@ -98,13 +98,13 @@
         <div class="wrapper flow">
           <h2 class="section-title">Get to know your mushrooms</h2>
           <div class="flex-group">
-            <select name="" id="">
+            <select name="season" id="season" hidden>
               <option value="all">Season: All</option>
               <option value="spring">Season: Spring</option>
               <option value="summer">Season: Summer</option>
               <option value="fall">Season: Fall</option>
             </select>
-            <select name="" id="">
+            <select name="edible" id="edible" hidden>
               <option value="all">Type: All</option>
               <option value="edible">Edible</option>
               <option value="toxic">Toxic</option>
@@ -423,6 +423,7 @@
                 Verify identification - has toxic look-alikes
               </p>
             </div>
+            <div class="no-results" hidden>No Results</div>
           </div>
         </div>
       </section>
