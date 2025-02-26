@@ -73,3 +73,14 @@ enableFiltering();
 // Mushroom guide select element event listeners
 seasonFilter.addEventListener('change', updateFilter);
 edibleFilter.addEventListener('change', updateFilter);
+
+// Resizing browser 
+const resizeObserver = new ResizeObserver((entries) => {
+  document.body.classList.add('resizing');
+
+  requestAnimationFrame(() => {
+    document.body.classList.remove('resizing');
+  })
+});
+
+resizeObserver.observe(document.body);

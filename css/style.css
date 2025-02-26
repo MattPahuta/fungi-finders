@@ -312,6 +312,9 @@
 
   .site-header {
     padding-block: 1rem;
+
+    overflow-x: clip;
+    position: relative;
   }
 
   .site-header__inner {
@@ -353,6 +356,11 @@
     /* query for desktop first makes sense with mobile navs */
     @media (width < 760px) {
       display: none;
+      opacity: 0;
+      transition: 
+        opacity 1s, display 1s, translate 1s;
+      transition-behavior: allow-discrete;
+      translate: 100% 0;
 
       position: absolute;
       z-index: 10;
@@ -368,6 +376,20 @@
       ul {
         gap: 0;
         flex-direction: column;
+      }
+
+      li {
+        --delay: 0.25s;
+        translate: 50%;
+        transition: translate 1s var(--delay), opacity 1s var(--delay);
+      }
+
+      li:nth-child(2) {
+        --delay: 0.45s;
+      }
+
+      li:nth-child(3) {
+        --delay: 0.65s;
       }
 
       /* alt: li:not(:first-child) */
@@ -387,6 +409,23 @@
 
     [aria-expanded='true'] + .primary-navigation {
       display: block;
+      opacity: 1;
+      translate: 0 0;
+
+      @starting-style {
+        opacity: 0;
+        translate: 0 -100%;
+      }
+
+      li {
+        translate: 0 0;
+        opacity: 1;
+
+        @starting-style {
+          opacity: 0;
+          translate: 50% 0; 
+        }
+      }
     }
   }
 
@@ -420,6 +459,11 @@
     background-image: url(../assets/hero.webp);
     background-size: cover;
     background-position: center;
+
+    /* testing only - animation */
+    animation: fade-out forwards;
+    animation-timeline: view();
+    animation-range-start: exit;
   }
 
   .hero__title {
@@ -608,6 +652,12 @@
   [hidden] {
     display: none;
   }
+
+  .resizing * {
+    transition: none;
+    animation: none;
+  }
+
   .visually-hidden {
     clip: rect(0 0 0 0);
     clip-path: inset(50%);
@@ -664,5 +714,14 @@
   }
   .font-size-lg {
     font-size: var(--font-size-lg);
+  }
+}
+
+/* Testing purposes only - animations */
+@keyframes fade-out {
+  from { opacity: 1;
+  }
+  to {
+    opacity: 0;
   }
 }
